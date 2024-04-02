@@ -2,6 +2,7 @@ import { Search, MoreHorizontal, ChevronsLeft, ChevronLeft, ChevronRight, Chevro
 import { IconButton } from "./ui/icon-button"
 import { Table } from "./table/table"
 import { TableHeader } from "./table/table-header"
+import { TableCell } from "./table/table-cell"
 
 export function AttendeeList() {
     return (
@@ -33,23 +34,23 @@ export function AttendeeList() {
                     {Array.from({ length: 8 }).map((_, i) => {
                         return (
                             <tr key={i} className="border-b border-white/10 hover:bg-white/5">
-                                <td className="py-3 px-4 text-sm text-zinc-300">
+                                <TableCell>
                                     <input type="checkbox" className="size-4 bg-black/20 rounded border border-white/10" />
-                                </td>
-                                <td className="py-3 px-4 text-sm text-zinc-300">12383</td>
-                                <td className="py-3 px-4 text-sm text-zinc-300">
+                                </TableCell>
+                                <TableCell>12383</TableCell>
+                                <TableCell>
                                     <div className="flex flex-col gap-1">
                                         <span className="font-semibold text-white">Diogo Azevedo</span>
                                         <span>idiogoazevedoo@gmail.com</span>
                                     </div>
-                                </td>
-                                <td className="py-3 px-4 text-sm text-zinc-300">7 days ago</td>
-                                <td className="py-3 px-4 text-sm text-zinc-300">3 days ago</td>
-                                <td className="py-3 px-4 text-sm text-zinc-300">
+                                </TableCell>
+                                <TableCell>7 days ago</TableCell>
+                                <TableCell>3 days ago</TableCell>
+                                <TableCell>
                                     <IconButton transparent>
                                         <MoreHorizontal className="size-4" />
                                     </IconButton>
-                                </td>
+                                </TableCell>
                             </tr>
                         )
                     })}
